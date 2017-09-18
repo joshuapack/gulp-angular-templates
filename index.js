@@ -57,6 +57,7 @@ function compile_html (file, opts) {
 
   var compiled_templates = [];
   _.each(templates, function (tpl) {
+    tpl.name = tpl.name.replace(new RegExp(/\\/g), '/');
     compiled_templates.push("    $templateCache.put('"+(opts.basePath?opts.basePath:'')+tpl.name+"',\n        "+tpl.contents+");");
   });
 
