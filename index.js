@@ -1,10 +1,11 @@
 var Stream = require('stream');
 var path = require('path');
-var gutil = require('gulp-util');
 var _ = require('lodash');
 var cheerio = require('cheerio');
-var PluginError = gutil.PluginError;
-var File = gutil.File;
+var PluginError = require('plugin-error');
+var File = require('vinyl');
+var colors = require('ansi-colors');
+var log = require('fancy-log');
 
 function compile_html (file, opts) {
 
@@ -41,7 +42,7 @@ function compile_html (file, opts) {
       var name = node.attr('id');
 
       if (!name) {
-        gutil.log(gutil.colors.yellow('warning'), 'file', gutil.colors.magenta(file.path), 'has an unnamed template');
+        log(colors.yellow('warning'), 'file', colors.magenta(file.path), 'has an unnamed template');
         return;
       }
 
