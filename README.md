@@ -2,7 +2,7 @@
 
 This plugins allows you to bundle templates directly in your application using the ```$templateCache``` service.
 
-Install it with ```npm install gulp-angular-templates --save-dev```.
+Install it with ```npm install https://github.com/joshuapack/gulp-angular-templates```.
 
 ## Usage
 
