@@ -1,7 +1,7 @@
 {
   "name": "gulp-angular-templates",
   "description": "AngularJS template assembler for Gulp.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": {
     "name": "Joshua Pack",
